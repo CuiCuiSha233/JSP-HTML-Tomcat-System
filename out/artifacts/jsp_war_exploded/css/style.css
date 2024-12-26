@@ -1,0 +1,665 @@
+/* 全局样式 */
+body {
+    background-color: #f4f6f9;
+    font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding: 0.8rem 0;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: #2c3e50 !important;
+}
+
+.nav-link {
+    color: #2c3e50;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #3498db !important;
+}
+
+.nav-link i {
+    margin-right: 0.5rem;
+}
+
+/* 搜索框样式 */
+.input-group {
+    width: 280px;
+    display: flex !important;  /* 强制使用 flex 布局 */
+    flex-wrap: nowrap !important;  /* 禁止换行 */
+}
+
+.search-input {
+    border-right: none;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.search-input:focus {
+    width: 320px;
+    border-color: #3498db;
+}
+
+.input-group .btn {
+    border-left: none;
+    padding: 0.375rem 0.75rem;
+    margin-left: -1px;  /* 确保与输入框紧密相连 */
+    flex-shrink: 0;  /* 防止按钮缩小 */
+}
+
+.input-group .btn:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+.input-group .form-control:focus + .btn {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+/* 主容器样式 */
+.container {
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+/* 卡片基础样式 */
+.card {
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+    margin-bottom: 1rem;
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 1.25rem;
+}
+
+.card-title {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* 群书卡片样式 */
+.topic-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.topic-card .card {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.topic-card .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.topic-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.topic-info {
+    flex: 1;
+}
+
+.topic-actions {
+    width: 160px;
+}
+
+.topic-actions .btn {
+    margin-bottom: 0.5rem;
+}
+
+/* 按钮样式 */
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px !important;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn i {
+    margin-right: 0.5rem;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+    border-color: #c0392b;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    border-color: #95a5a6;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+    border-color: #7f8c8d;
+}
+
+/* 表单样式 */
+.form-control {
+    border: 1px solid #dce4ec;
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+.form-label {
+    color: #2c3e50;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* 文本区域样式 */
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+    white-space: pre-wrap;
+    line-height: 1.8;
+    font-size: 1rem;
+    padding: 0.75rem;
+}
+
+/* 评论框样式 */
+.comment-form {
+    width: 100%;  /* 改为100%宽度 */
+    min-width: 100%;  /* 最小宽度也是100% */
+}
+
+.comment-form .input-group {
+    width: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;  /* 改为纵向排列 */
+    gap: 10px;  /* 添加间距 */
+}
+
+
+.comment-form textarea.form-control {
+    display: block;
+    width: 100%;
+    min-height: 80px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #2c3e50;
+    background-color: #fff;
+    border: 1px solid #dce4ec;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.comment-form textarea.form-control:focus {
+    color: #2c3e50;
+    background-color: #fff;
+    border-color: #3498db;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+
+.comment-form .btn {
+    height: 38px;
+    width: 120px;  /* 设置按钮宽度 */
+    align-self: flex-end;  /* 按钮靠右对齐 */
+}
+
+/* 内容显示样式 */
+.post-content,
+.comment-content,
+.announcement-content {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 1.8;
+    font-size: 1rem;
+    color: #2c3e50;
+    padding: 0.5rem 0;
+    width: 100%;
+}
+
+/* 评论样式 */
+.comment {
+    padding: 0.75rem 0;
+}
+
+.comment:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.comment-content {
+    margin-top: 0.25rem;
+    padding: 0.25rem 0;
+}
+
+/* 公告样式 */
+.announcement {
+    padding: 0.75rem 0;
+}
+
+.announcement:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.announcement-content {
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+/* 字块编辑器样式 */
+#content.form-control {
+    min-height: 200px;
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    background-color: #fff;
+    border: 1px solid #dce4ec;
+}
+
+#content.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+/* 模态框样式 */
+.modal-content {
+    border: none;
+    border-radius: 8px;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 1.25rem;
+}
+
+.modal-body {
+    padding: 1.25rem;
+}
+
+.modal-footer {
+    border-top: 1px solid #eee;
+    padding: 1rem 1.25rem;
+}
+
+/* 提示框样式 */
+.alert {
+    border: none;
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.alert i {
+    margin-right: 0.5rem;
+}
+
+/* 字数限制提示 */
+.form-text {
+    color: #7f8c8d;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* 工具类 */
+.shadow-sm {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+}
+
+.text-muted {
+    color: #95a5a6 !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.py-4 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+/* 管理页面表格样式 */
+.table {
+    margin-bottom: 0;
+}
+
+.table td,
+.table th {
+    padding: 0.5rem !important;  /* 减小内边距 */
+    vertical-align: middle;
+    font-size: 0.9rem;  /* 稍微减小字体大小 */
+}
+
+/*.table td {
+    white-space: pre-line;
+    word-wrap: break-word;
+    word-break: break-all;
+    max-width: 300px;
+    padding: 0.5rem !important;  !* 减小padding *!
+    vertical-align: middle;
+}*/
+
+/* 内容预览样式 */
+
+/*.content-preview {
+    white-space: pre-line;
+    word-wrap: break-word;
+    word-break: break-all;
+    max-height: 2.4em;  !* 限制高度为2行 *!
+    line-height: 1.2;   !* 调整行高 *!
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;          !* 移除外边距 *!
+    padding: 0;         !* 移除内边距 *!
+}*/
+
+.content-preview {
+    max-height: 1.4em;  /* 限制为一行高度 */
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;  /* 强制单行显示 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 表格容器样式 */
+/*.table-responsive {*/
+/*    margin-bottom: 0;   !* 移除底部边距 *!*/
+/*}*/
+
+.table-responsive {
+    margin-bottom: 0;
+    border: none;
+}
+
+.table > tbody > tr {
+    height: auto;  /* 自动高度 */
+}
+.table td > * {
+    margin: 0;  /* 移除内部元素的外边距 */
+}
+.table td i,
+.table th i {
+    width: 16px;  /* 固定图标宽度 */
+    text-align: center;
+    margin-right: 0.25rem;
+}
+.table .badge {
+    padding: 0.25em 0.5em;
+    font-size: 0.85em;
+}
+
+/*!* 调整表格行高 *!*/
+/*.table > tbody > tr > td {*/
+/*    line-height: 1.2;*/
+/*    padding: 0.5rem;*/
+/*}*/
+
+/*!* 调整表格头部 *!*/
+/*.table > thead > tr > th {*/
+/*    padding: 0.5rem;*/
+/*    white-space: nowrap;*/
+/*}*/
+
+/* Tab样式优化 */
+.nav-tabs .nav-link {
+    color: #2c3e50;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link.active {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    background: none;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+    color: #3498db;
+}
+
+.gradient-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background: linear-gradient(
+            125deg,
+            #ff6b6b,
+            #4ecdc4,
+            #45b7d1,
+            #a06cd5,
+            #f7d794,
+            #786fa6,
+            #f8c291,
+            #00d2d3
+    );
+    background-size: 800% 800%; /* 增加渐变范围 */
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 100%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 0%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.login-container {
+    position: relative;
+    z-index: 1;
+    height: 100vh;      /* 改用 height 而不是 min-height */
+    overflow: hidden;
+}
+
+
+/* 调整行间距 */
+.login-container .row {
+    --bs-gutter-x: -14.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+.login-card {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+    padding: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+
+/* 增加卡片内容的对比度 */
+.login-card .card-body {
+    background: transparent;
+}
+
+.login-card .text-primary {
+    color: #2c3e50 !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.login-card .text-muted {
+    color: #34495e !important;
+}
+
+/* 美化表单元素 */
+
+.login-card .form-control:focus {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.2);
+}
+
+
+.captcha-container {
+    flex: 0 0 auto;
+    width: 41%;
+    text-align: center;
+    scale: 1.36;
+    position: relative;
+    top: 8px;
+}
+.login-card .form-control {
+    width: 100%;
+    border: 1px solid #dce4ec;
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+}
+
+
+
+/* 美化按钮 */
+.login-card .btn {
+    border-radius: 10px;
+    padding: 0.4rem 1.0rem;
+}
+
+/* 美化标签页 */
+.login-card .nav-tabs {
+    border-bottom: none;
+}
+
+.login-card .nav-tabs .nav-link {
+    border-radius: 10px;
+    margin: 0 5px;
+    padding: 0.4rem 1.6rem;
+}
+
+.login-card .nav-tabs .nav-link.active {
+    background: rgba(52, 152, 219, 0.1);
+    border: none;
+    color: #3498db;
+}
+
+/* 验证码图片样式 */
+.login-card img {
+    border-radius: 8px;
+}
+
+/* 错误提示样式 */
+.login-card .alert {
+    background: rgba(220, 53, 69, 0.1);
+    border: none;
+    border-radius: 10px;
+}
+
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .input-group {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .search-input:focus {
+        width: 100%;
+    }
+
+    .table td {
+        max-width: 200px;
+    }
+
+    .content-preview {
+        max-height: 2.4em;
+    }
+
+    .topic-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .topic-actions {
+        width: 100%;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    .login-card {
+        margin: 0 15px;
+    }
+
+    .login-card .nav-tabs .nav-link {
+        padding: 0.6rem 1rem;
+    }
+}
